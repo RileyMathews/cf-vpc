@@ -42,6 +42,7 @@ Parameters:
 
   PrivateSubnet3CIDR:
     Description: Please enter the IP range (CIDR notation) for the private subnet in the third Availability Zone
+    Type: String
     Default: 172.31.22.0/28
 
 Resources:
@@ -146,7 +147,7 @@ Resources:
     Properties:
       Domain: vpc
 
-  NatGAteway3EIP:
+  NatGateway3EIP:
     Type: AWS::EC2::EIP
     DependsOn: InternetGatewayAttachment
     Properties:
